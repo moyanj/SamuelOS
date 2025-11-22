@@ -143,8 +143,6 @@ linux-zen-headers
 # 中文支持
 noto-fonts-cjk
 noto-fonts-emoji
-adobe-source-han-sans-cn-fonts
-adobe-source-han-serif-cn-fonts
 fcitx5-chinese-addons
 
 # 输入法
@@ -154,9 +152,7 @@ fcitx5-gtk
 fcitx5-qt
 
 # 工具
-net-tools
 htop
-screenfetch
 fastfetch
 ncdu
 make
@@ -164,9 +160,7 @@ tree
 aria2
 wget
 python
-python-pip
 git
-base-devel
 curl
 rsync
 unzip
@@ -175,6 +169,3 @@ zip
 
 # archlinuxcn
 archlinuxcn-keyring
-
-# shell
-git-zsh-completion
