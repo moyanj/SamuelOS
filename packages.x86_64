@@ -175,3 +175,6 @@ zip
 
 # archlinuxcn
 archlinuxcn-keyring
+
+# shell
+git-zsh-completion

@@ -7,7 +7,7 @@ iso_publisher="Samuel OS <https://blog.moyanjdc.top>"
 iso_application="Samuel OS  Live/Rescue DVD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="samuel"
-buildmodes=('iso')
+buildmodes=('iso','bootstrap')
 bootmodes=('bios.syslinux'
            'uefi.systemd-boot')
 pacman_conf="pacman.conf"
