@@ -48,7 +48,7 @@ EOF
 
 cat > ${USER_HOME}/.config/kdeglobals <<EOF
 [General]
-fixed=Hack Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 font=Noto Sans CJK SC,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 menuFont=Noto Sans CJK SC,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 smallestReadableFont=Noto Sans CJK SC,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
@@ -85,7 +85,7 @@ chmod +x /etc/skel/Desktop/install.desktop
 
 # 默认用户
 useradd -m -G wheel -s /usr/bin/zsh samuel
-
+echo "samuel:samuel" | chpasswd
 echo "samuel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # 服务自启

@@ -137,8 +137,7 @@ pulseaudio
 pulseaudio-alsa
 plasma-pa
 firefox
-
-linux-zen-headers
+ttf-jetbrains-mono
 
 # 中文支持
 noto-fonts-cjk
@@ -169,4 +168,5 @@ zip
 # archlinuxcn
 archlinuxcn-keyring
 
+# 安装工具
 calamares
