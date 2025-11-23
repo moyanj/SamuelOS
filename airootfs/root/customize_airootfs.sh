@@ -73,11 +73,11 @@ cat > /etc/skel/Desktop/install.desktop << EOF
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Install Samuel OS
-Exec=calamares
+Name=安装 Samuel OS
+Exec=sudo calamares
 Icon=system-installer
 Categories=System;
-Comment=Install Samuel OS to your computer
+Comment=将 Samuel OS 安装到您的计算机
 EOF
 
 # 设置文件权限
