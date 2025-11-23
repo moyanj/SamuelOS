@@ -1,5 +1,0 @@
-root:x:0:root
-adm:x:4:samuel
-wheel:x:10:samuel
-uucp:x:14:samuel
-samuel:x:1000:
