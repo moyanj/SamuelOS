@@ -1,5 +1,5 @@
 ---
-componentName:  archiso
+componentName:  samuel-os
 
 welcomeStyleCalamares:   false
 
@@ -16,17 +16,17 @@ sidebar: widget
 navigation: widget
 
 strings:
-    productName:         Archiso
-    shortProductName:    Archiso
-    version:             72-1
-    shortVersion:        2023.09.01
-    versionedName:       Archiso
-    shortVersionedName:  Archiso
+    productName:         Samuel OS
+    shortProductName:    Samuel
+    version:             1-1
+    shortVersion:        2025
+    versionedName:       Samuel OS
+    shortVersionedName:  Samuel OS
     bootloaderEntryName: Generic
 
 images:
     productIcon:            "logo.png"
-    productLogo:            "squid.png"
+    productLogo:            "logo.png"
     productWelcome:         "idioma.png"
 
 style:
