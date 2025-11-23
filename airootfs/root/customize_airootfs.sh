@@ -2,6 +2,62 @@
 sed -i 's/#zh_CN.UTF-8/zh_CN.UTF-8/' /etc/locale.gen
 locale-gen
 
+fc-cache -fv
+
+## 创建输入法配置文件
+mkdir -p /etc/xdg/autostart
+cat > /etc/xdg/autostart/fcitx5.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Name=FCITX5
+Exec=fcitx5 -d
+EOF
+
+## 设置全局环境变量
+echo "GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus" >> /etc/environment
+
+## 用户级配置
+USER_HOME=/etc/skel
+mkdir -p ${USER_HOME}/.config/fcitx5/conf
+cat > ${USER_HOME}/.config/fcitx5/profile <<EOF
+[Profile]
+IMName=fcitx5
+IMDisplayName=FCITX5
+DefaultIM=pinyin
+EOF
+
+cat > ${USER_HOME}/.config/fcitx5/conf/pinyin.conf <<EOF
+[Pinyin]
+InitialPromptTimeout=500
+PageSize=7
+ShowPrediction=True
+EOF
+
+cat > ${USER_HOME}/.config/fcitx5/conf/classicui.conf <<EOF
+# 字体
+Font="Noto Sans CJK SC 12"
+# 菜单字体
+MenuFont="Noto Sans CJK SC 12"
+# 托盘字体
+TrayFont="Noto Sans CJK SC 12"
+EOF
+
+cat > ${USER_HOME}/.config/kdeglobals <<EOF
+[General]
+fixed=Hack Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Noto Sans CJK SC,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Noto Sans CJK SC,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Noto Sans CJK SC,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Noto Sans CJK SC,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[WM]
+activeFont=Noto Sans CJK SC,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+EOF
+
 # 默认用户
 useradd -m -G wheel -s /usr/bin/zsh samuel
 
