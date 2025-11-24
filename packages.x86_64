@@ -130,6 +130,7 @@ zsh
 # 桌面环境
 plasma-meta
 sddm
+mesa
 kde-utilities-meta
 kde-system-meta
 networkmanager
@@ -164,6 +165,7 @@ rsync
 unzip
 zip
 7zip
+yay
 
 # archlinuxcn
 archlinuxcn-keyring
